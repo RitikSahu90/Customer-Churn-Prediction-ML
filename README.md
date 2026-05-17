@@ -1,64 +1,144 @@
 # Customer Churn Prediction using PSO-Based Feature Selection
 
-## Overview
+## Project Overview
 
-This project predicts telecom customer churn using Machine Learning and Particle Swarm Optimization (PSO) based feature selection.
+This project focuses on predicting telecom customer churn using Machine Learning and Particle Swarm Optimization (PSO) based feature selection techniques.
 
-The workflow includes:
+The system performs end-to-end ML workflow including:
+- Data preprocessing
+- Feature engineering
+- Data balancing using SMOTE
+- PSO-based feature optimization
+- Multi-model training and evaluation
+- Performance visualization
 
-- Data Cleaning
-- Feature Engineering
-- One Hot Encoding
-- Feature Scaling
-- SMOTE Balancing
-- PSO Feature Selection
-- Machine Learning Model Training
-- Performance Evaluation
-- Visualization
+The objective is to identify customers likely to leave telecom services and improve prediction performance through optimized feature selection.
+
+---
+
+## Dataset
+
+Dataset: Telco Customer Churn Dataset
+
+Features include:
+- Customer demographics
+- Billing information
+- Subscription details
+- Internet services
+- Payment methods
+- Contract types
+
+Target Variable:
+- Churn (Yes/No)
+
+---
+
+## Workflow Pipeline
+
+1. Data Cleaning
+2. Feature Engineering
+3. Target Encoding
+4. One Hot Encoding
+5. Feature Scaling
+6. Train-Test Split
+7. SMOTE Oversampling
+8. PSO Feature Selection
+9. Model Training
+10. Cross Validation
+11. Performance Evaluation
+12. Visualization and Result Saving
+
+---
+
+## Feature Engineering
+
+Custom engineered features include:
+- Average Monthly Spend
+- Remaining Customer Value
+- Service Count
+- Support Services Count
+- Fiber Optic Usage
+- Paperless Billing Indicator
 
 ---
 
 ## Technologies Used
 
 - Python
-- Scikit-learn
-- XGBoost
-- PSO (PySwarms)
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
+- Scikit-learn
+- XGBoost
+- PySwarms
+- Imbalanced-learn
 
 ---
 
-## Models Used
+## Machine Learning Models
+
+The following models were trained and evaluated:
 
 - Logistic Regression
 - Random Forest
 - Gradient Boosting
 - XGBoost
-- Neural Network (MLP)
+- Multi-Layer Perceptron (MLP)
 
 ---
 
-## Dataset
+## Feature Selection using PSO
 
-Telco Customer Churn Dataset
+Particle Swarm Optimization (PSO) was used to select the most relevant features by minimizing classification error and improving F1-score.
+
+Benefits:
+- Reduced feature dimensionality
+- Improved model efficiency
+- Better generalization performance
 
 ---
 
-## Results
+## Evaluation Metrics
 
-The project compares multiple ML models using:
-
+Models were evaluated using:
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 - ROC-AUC
+- Cross Validation F1 Mean
 
 ---
 
-## Author
+## Best Model Performance
 
-Ritik Ranjan Sahu
+| Model | Accuracy | F1-Score | ROC-AUC |
+|------|------|------|------|
+| PSO + Gradient Boosting | 77.14% | 0.6139 | 0.8269 |
+
+---
+
+## Visualizations
+
+The project generates:
+- Confusion Matrices
+- ROC Curves
+- Feature Importance Graphs
+- Correlation Heatmaps
+- Model Comparison Charts
+
+---
+
+## Project Structure
+
+```text
+Customer-Churn-Prediction-ML/
+│
+├── data/
+├── notebooks/
+├── results/
+├── src/
+├── requirements.txt
+├── README.md
+└── .gitignore
